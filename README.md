@@ -10,4 +10,6 @@ C. Create a mysql database, create database {name}
 
 D. Create local_settings.py by copying the settings.py file
 
-E. 
+E. Add the Database settings - NAME, USER, PASSWROD, HOST, PORT in the local_settings.py file
+
+F. 
