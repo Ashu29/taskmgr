@@ -3,7 +3,8 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "task_manager.settings")
+    settings_file = "local_settings" if os.path.exists("task_manager/local_settings.py") else "settings"
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "task_manager.{}".format(settings_file))
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
